@@ -1,6 +1,6 @@
 <?php
  //string to inteegr 
- 
+
 $string="123456789";
 $number=(int)$string;
 echo "$number"; 
@@ -30,7 +30,16 @@ $fruits=array('mango','banana','pineApple','apple');
   echo 'the course Teacher is:'. $course["Teacher"];
   
   echo "<br>";
-  echo 'the course Teacher is:'. ${$x+$y};
+  echo "the course Teacher is:". $x+$y;
+
+  echo $x+=$y;
+
+  echo $x-=$y;
+
+  echo $x*=$y;
+
+
+
 
 
 
