@@ -31,11 +31,11 @@ $fruits=array('mango','banana','pineApple','apple');
   
   echo "<br>";
   echo "the course Teacher is:". $x+$y;
-
+echo "<br>";
   echo $x+=$y;
-
+echo "<br>";
   echo $x-=$y;
-
+echo "<br>";
   echo $x*=$y;
 
 
