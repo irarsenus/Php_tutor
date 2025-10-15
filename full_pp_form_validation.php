@@ -25,6 +25,7 @@
     <input type="submit" value="Register">
     <?php
     if($_SERVER[REQUEST_METHOD]=="POST"){
+        $name=$_POST['u_NAME']; 
         
     }
 
