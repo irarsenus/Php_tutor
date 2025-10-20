@@ -1,0 +1,61 @@
+const express=require('express');
+const app= express();
+
+const port= 3000;
+app.use(express.json());
+let items=[];
+
+//--post--
+
+app.post('/items',(res,req)=>{
+
+const newItem={
+id:items.length+1,
+name:req.body.name,
+
+};
+items.push(newItem);
+res.status(201).json(newItem);
+
+});
+
+//--get--
+
+app.get('/items',(req,res)=>{
+res.json(items);
+
+});
+
+//--put--
+
+app.put('/items:id',(req.res)=>{
+
+const itemId=items.parseInt(req.params.id);
+const item=items.find(i=>i.id===itemId);
+
+if(!item){
+return res.status(404).json({message:'Not found'})
+}
+item.name=req.name.body;
+res.json(item);
+
+//--delete--
+
+app.delete('/items:id',(res,req)=>{
+const itemId=parseInt(req.params.id)
+const itemIndex=items.findIndex(i=>i.id===itemId);
+
+if(itemIndex===-1){
+return status(404).jsnon({message:'Not Found'});
+
+}
+items.splice(itemIndex,1);
+res.status(204).send();
+
+});
+app.listen(PORT,()=>{
+
+console.log(`server is running on :${PORT}`);
+
+
+});

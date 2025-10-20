@@ -1,5 +1,5 @@
 <?php
-$file= 'test.txt';
+$file= 'C:\xampp\htdocs\php_lesson_2025-2026\crud_node_js.txt';
 
 $handle=fopen($file,'r');
 
